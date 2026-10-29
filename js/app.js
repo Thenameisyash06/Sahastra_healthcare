@@ -924,12 +924,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Helper: Dispatch Automated Background WhatsApp Notification via Green-API
   async function dispatchGreenApiWhatsApp(data, requestId) {
-    const greenHost = (clinic.greenApi && clinic.greenApi.host) || "https://7107.api.green-api.com";
-    const idInstance = (clinic.greenApi && clinic.greenApi.idInstance) || "710722781766";
-    const apiToken = (clinic.greenApi && clinic.greenApi.apiTokenInstance) || "35e4d99b93c342f591e581b893d9e4c7f5f54b167b194b10a3";
-    const recipientPhone = (clinic.greenApi && clinic.greenApi.recipientPhone) || "918104184829";
-    const targetChatId = (clinic.greenApi && clinic.greenApi.groupChatId) || `${recipientPhone.replace(/[^0-9]/g, "")}@c.us`;
-
     const formattedMessage = [
       `🏥 *NEW APPOINTMENT REQUEST — SAHASTRA OCUDENT HEALTHCARE*`,
       `━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
@@ -945,13 +939,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ].join("\n");
 
     const payload = {
-      chatId: targetChatId,
       message: formattedMessage,
       appointmentData: { ...data, requestId },
       targetEmail: (clinic.contact && clinic.contact.emailAppointments) || "karansingchavan2582@gmail.com"
     };
 
-    // 1. Try local serverless endpoint (/api/send-appointment) if available
+    // 1. Primary: Serverless endpoint (/api/send-appointment) using server-side .env credentials
     try {
       const serverlessRes = await fetch("/api/send-appointment", {
         method: "POST",
@@ -962,24 +955,55 @@ document.addEventListener("DOMContentLoaded", () => {
         return await serverlessRes.json();
       }
     } catch (e) {
-      // Fallback to direct client-side fetch
+      // Fallback to direct client-side fetch if serverless endpoint is unavailable
     }
 
-    // 2. Direct Green-API call fallback (CORS enabled)
+    // 2. Direct Green-API call fallback (if credentials fetched from environment)
     try {
-      const directUrl = `${greenHost}/waInstance${idInstance}/sendMessage/${apiToken}`;
-      const response = await fetch(directUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chatId: payload.chatId,
-          message: payload.message
-        })
-      });
-      return await response.json();
+      const greenHost = (clinic.greenApi && clinic.greenApi.host) || "https://7107.api.green-api.com";
+      const idInstance = clinic.greenApi && clinic.greenApi.idInstance;
+      const apiToken = clinic.greenApi && clinic.greenApi.apiTokenInstance;
+      const recipientPhone = (clinic.greenApi && clinic.greenApi.recipientPhone) || "918104184829";
+      const targetChatId = (clinic.greenApi && clinic.greenApi.groupChatId) || `${recipientPhone.replace(/[^0-9]/g, "")}@c.us`;
+
+      if (idInstance && apiToken) {
+        const directUrl = `${greenHost}/waInstance${idInstance}/sendMessage/${apiToken}`;
+        const response = await fetch(directUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chatId: targetChatId,
+            message: payload.message
+          })
+        });
+        return await response.json();
+      }
     } catch (err) {
       console.warn("Direct Green API dispatch notice:", err);
       return null;
+    }
+  }
+
+  // Fetch environment configuration (Green-API credentials from .env)
+  async function fetchEnvConfig() {
+    try {
+      const res = await fetch("/api/config");
+      if (res.ok) {
+        const config = await res.json();
+        if (config) {
+          if (!clinic.greenApi) clinic.greenApi = {};
+          if (config.host) clinic.greenApi.host = config.host;
+          if (config.idInstance) clinic.greenApi.idInstance = config.idInstance;
+          if (config.apiTokenInstance) clinic.greenApi.apiTokenInstance = config.apiTokenInstance;
+          if (config.recipientPhone) clinic.greenApi.recipientPhone = config.recipientPhone;
+          if (config.groupChatId) clinic.greenApi.groupChatId = config.groupChatId;
+          if (config.emailAppointments && clinic.contact) {
+            clinic.contact.emailAppointments = config.emailAppointments;
+          }
+        }
+      }
+    } catch (e) {
+      // Pure static environment without backend endpoint
     }
   }
 
@@ -1219,6 +1243,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize
+  fetchEnvConfig();
   initNavLinks();
   initDateConstraints();
   initRouting();

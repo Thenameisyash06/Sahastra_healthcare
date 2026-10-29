@@ -50,8 +50,8 @@ const CLINIC_CONFIG = {
 
   greenApi: {
     host: "https://7107.api.green-api.com",
-    idInstance: "710722781766",
-    apiTokenInstance: "35e4d99b93c342f591e581b893d9e4c7f5f54b167b194b10a3",
+    idInstance: "",
+    apiTokenInstance: "",
     recipientPhone: "918104184829",
   },
 
