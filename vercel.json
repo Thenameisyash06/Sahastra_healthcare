@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/eye-care", "destination": "/index.html" },
+    { "source": "/dental-care", "destination": "/index.html" }
+  ]
+}

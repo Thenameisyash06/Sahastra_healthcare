@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" data-department="eye-care">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Services & Treatments | SAHASTRA OCUDENT HEALTHCARE</title>
+  <meta name="description" content="Explore specialized ophthalmology and dental treatments at Sahastra Ocudent Healthcare: sutureless Phaco cataract surgery, glaucoma screening, single-sitting rotary RCT, dental implants, and smile design.">
+  <link rel="canonical" href="https://sahastraocudent.org/services">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4.3">
+</head>
+<body class="page-services">
+
+  <!-- ========================================================================
+       1. Global Header with Department Switcher & Navigation
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Clinic Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Sahastra Ocudent Healthcare - Home">
+        <img src="assets/icons/sahastra-logo.png" alt="SAHASTRA OCUDENT HEALTHCARE Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Department Switcher -->
+      <nav class="dept-switcher-wrapper" aria-label="Department Switcher">
+        <div class="dept-pill-indicator" id="dept-pill-indicator" aria-hidden="true"></div>
+        <button type="button" class="dept-btn active" data-dept="eye-care" id="dept-btn-eye" aria-pressed="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>Eye Care</span>
+        </button>
+        <button type="button" class="dept-btn" data-dept="dental-care" id="dept-btn-dental" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/>
+            <path d="M9 7c1 1 5 1 6 0"/>
+          </svg>
+          <span>Dental Care</span>
+        </button>
+      </nav>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="why-choose-us.html" class="nav-link">Why Choose Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="contact.html#appointment-section" class="btn btn-primary btn-sm header-cta-desktop">
+          <span>Book Appointment</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Sidebar -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="assets/icons/sahastra-logo.png" alt="Sahastra Logo" style="height: 38px; width: auto;">
+      <button type="button" class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="mobile-dept-switcher">
+      <button type="button" class="mobile-dept-btn active" data-dept="eye-care">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Eye Care</span>
+      </button>
+      <button type="button" class="mobile-dept-btn" data-dept="dental-care">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/></svg>
+        <span>Dental Care</span>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Clinic</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Clinical Services</a></li>
+      <li><a href="why-choose-us.html" class="mobile-nav-link">Why Choose Us</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact & Location</a></li>
+    </ul>
+
+    <div class="mobile-drawer-cta">
+      <a href="contact.html#appointment-section" class="btn btn-primary btn-block">Book Appointment</a>
+      <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.776-.876-2.052-.976-.275-.101-.476-.15-.677.15-.2.301-.776.976-.952 1.177-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.502.101-.201.05-.376-.025-.526-.075-.151-.677-1.632-.928-2.235-.244-.588-.492-.508-.677-.518l-.578-.01c-.201 0-.527.076-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.08 2.912 1.23 3.113.151.201 2.126 3.246 5.15 4.553.72.311 1.282.497 1.72.637.724.23 1.382.197 1.903.12.58-.087 1.776-.726 2.026-1.428.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351zM12.04 2C6.54 2 2.08 6.46 2.08 11.96c0 1.98.58 3.82 1.58 5.37L2 22l4.82-1.61c1.48.91 3.22 1.44 5.22 1.44 5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.23c-1.75 0-3.37-.53-4.73-1.44l-.34-.23-2.86.95.96-2.78-.23-.37a8.17 8.17 0 0 1-1.25-4.4c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.27-8.2 8.27z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ========================================================================
+         2. Page Hero Banner (Switches dynamically with Department Toggle)
+         ======================================================================== -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Services</span>
+        </nav>
+
+        <!-- Eye Care Hero View -->
+        <div class="dept-content-eye">
+          <span class="page-badge">Advanced Ophthalmology & Vision Science</span>
+          <h1 class="page-hero-title">Specialized Eye Care & Surgical Services</h1>
+          <p class="page-hero-subtitle">
+            Led by Senior Ophthalmic Surgeon Dr. Karansing Dhanraj Chavan (MS - Ophthalmology), our eye center delivers state-of-the-art sutureless cataract surgery, non-invasive glaucoma monitoring, and precision vision restoration using hospital-grade Nidek and Zeiss diagnostic equipment.
+          </p>
+        </div>
+
+        <!-- Dental Care Hero View -->
+        <div class="dept-content-dental">
+          <span class="page-badge">Advanced Dental Science & Aesthetics</span>
+          <h1 class="page-hero-title">Complete Dental Care & Restorative Specialties</h1>
+          <p class="page-hero-subtitle">
+            Led by Orthodontic Specialist Dr. Aditi Rajesh Pawar (MDS - Orthodontics &amp; Dentofacial Orthopaedics, Gold Medalist MUHS), our dental clinic provides modern orthodontic braces, clear aligner therapy, restorative smile design, and gentle family dentistry in a sterile environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. Comprehensive Clinical Services List (Separate Eye & Dental)
+         ======================================================================== -->
+
+    <!-- EYE CARE SERVICES SECTION -->
+    <section class="section-wrapper dept-content-eye" id="eye-services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Ophthalmology Procedures</span>
+          <h2 class="section-title">6 Core Ophthalmic Specialties</h2>
+          <p class="section-subtitle">
+            Every procedure is planned with evidence-based medical diagnostics and performed personally by Dr. Karansing Dhanraj Chavan.
+          </p>
+        </div>
+
+        <div class="services-detailed-list">
+          
+          <!-- Eye Service 1 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 14.83 4.24 4.24"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Surgical Excellence</span>
+              <h3>Micro-Incision Phaco Cataract Surgery & Premium IOLs</h3>
+              <p>
+                Ultrasonic cold Phacoemulsification through a microscopic 2.2 mm sutureless incision. We safely emulsify the cataractous lens and implant personalized monofocal, Toric (astigmatism-correcting), or multifocal intraocular lenses for crisp, life-changing vision.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Schedule Cataract Evaluation</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>2.2 mm sutureless, stitchless micro-incision technique</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Topical anesthetic drops (no painful needles or eye patches)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>High-precision optical biometry for customized IOL power</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quick 15–20 minute procedure with same-day home discharge</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eye Service 2 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Preventive Screening</span>
+              <h3>Early Glaucoma Screening & IOP Tonometry</h3>
+              <p>
+                Glaucoma is often symptomless until irreversible vision loss occurs. We conduct gold-standard Goldmann applanation tonometry, gonioscopy, and digital optic nerve cup-to-disc ratio assessments to catch intraocular pressure spikes early and preserve vision.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Glaucoma Check</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calibrated Goldmann applanation tonometry (gold standard)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Detailed anterior chamber angle evaluation (Gonioscopy)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Digital baseline optic disc photography & progression tracking</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Target IOP drop therapy & long-term pressure stabilization</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eye Service 3 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Retina & Macula</span>
+              <h3>Digital Diabetic Retinopathy & Macular Screening</h3>
+              <p>
+                Diabetic microvascular changes and hypertensive retinopathy require prompt clinical observation. Dr. Karansing Dhanraj Chavan performs dilated high-magnification fundus evaluations to detect microaneurysms, macular edema, and retinal exudates.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Retinal Screening</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>High-magnification binocular indirect ophthalmoscopy</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Diabetic macular edema (DME) staging & systemic coordination</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Age-Related Macular Degeneration (ARMD) risk assessment</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Peripheral retinal tear & floaters investigation</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eye Service 4 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Ocular Surface</span>
+              <h3>Dry Eye Clinic & Meibomian Gland Dysfunction (MGD)</h3>
+              <p>
+                Digital screen fatigue, air pollution, and age can deplete tear film quality. We measure tear break-up time (TBUT) and evaluate meibomian oil glands to create a restorative multi-action protocol that relieves burning and gritty sensation.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Dry Eye Therapy</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Fluorescein tear film break-up time (TBUT) diagnostics</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Meibomian gland expression & warm thermal de-clogging</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Preservative-free lipid & osmotic balance artificial tears</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Workstation ergonomic & 20-20-20 screen rule coaching</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eye Service 5 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Family Care</span>
+              <h3>Pediatric Ophthalmology & Myopia Management</h3>
+              <p>
+                Children rarely complain of poor eyesight. We provide patient-friendly visual screenings for lazy eye (amblyopia), squint (strabismus), and progressive childhood myopia to support proper scholastic development.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Pediatric Vision Exam</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Cycloplegic streak retinoscopy for true refractive power</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Amblyopia occlusion patch therapy & tracking</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Binocular single vision & stereo-acuity evaluation</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Myopia progression arrest counseling & outdoor light advice</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eye Service 6 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M2.5 13 5 7c.7-1.3 1.4-2 3-2"/><path d="M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Optical Diagnostics</span>
+              <h3>Computer Vision Syndrome (CVS) & Optical Dispensary</h3>
+              <p>
+                Eliminate digital headaches, neck strain, and blurred screen vision. We prescribe precision anti-fatigue lenses, blue-cut coatings, and ergonomic progressive lenses tailored to your specific working distances.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Refraction Check</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Digital pupillometry & optical center height alignment</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Blue-light filter verification with spectrometer testing</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Wide-corridor progressive lenses for seamless desk & distance vision</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>High-index ultra-thin optics for strong prescriptions</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DENTAL CARE SERVICES SECTION -->
+    <section class="section-wrapper dept-content-dental" id="dental-services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Dental Procedures</span>
+          <h2 class="section-title">6 Core Dental Specialties</h2>
+          <p class="section-subtitle">
+            Every procedure is planned with digital intraoral imaging and performed personally by Dr. Aditi Rajesh Pawar.
+          </p>
+        </div>
+
+        <div class="services-detailed-list">
+          
+          <!-- Dental Service 1 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/><path d="M9 7c1 1 5 1 6 0"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Restorative Endodontics</span>
+              <h3>Painless Single-Sitting Rotary Root Canal Therapy (RCT)</h3>
+              <p>
+                Save infected or severely decayed natural teeth without extraction. Dr. Aditi Rajesh Pawar utilizes flexible nickel-titanium motorized rotary files, digital electronic apex locators, and computerized local anesthesia to make the procedure completely painless and achievable in one visit.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book RCT Consultation</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Digital electronic apex locator for 0.1 mm canal depth precision</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Motorized rotary nickel-titanium files that preserve sound dentin</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Ultrasonic activation of disinfectant irrigants for 100% bacterial kill</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Hermetic 3D warm vertical obturation & monolithic zirconia crown</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dental Service 2 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Implantology</span>
+              <h3>Advanced Dental Implants & Bone Preservation</h3>
+              <p>
+                Permanent, biocompatible titanium root replacements that restore full chewing power and facial profile. We utilize 3D implant planning to ensure optimal osseointegration, lifetime stability, and natural aesthetic gum emergence.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Implant Consultation</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Medical-grade grade-IV pure titanium & zirconia implants</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Computer-guided flapless placement for rapid gum healing</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Ridge preservation & gentle synthetic bone grafting</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Custom milled CAD/CAM screw-retained ceramic crowns</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dental Service 3 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Aesthetic Dentistry</span>
+              <h3>Smile Design, Porcelain Veneers & Whitening</h3>
+              <p>
+                Transform chipped, discolored, or uneven teeth into a radiant, balanced smile. Dr. Aditi Rajesh Pawar designs ultrathin ceramic porcelain veneers and performs gentle LED laser teeth whitening tailored to your unique facial contours.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Smile Consultation</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Micro-thin E-max ceramic veneers (minimal tooth preparation)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>In-office LED cool whitening (up to 6 shades brighter)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Composite edge bonding for gap closure and minor chipping</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Digital aesthetic preview mockups before treatment begins</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dental Service 4 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Orthodontics</span>
+              <h3>Clear Aligners & Invisible Orthodontics</h3>
+              <p>
+                Straighten crowded teeth, close bite spaces, and correct malocclusions without noticeable metal wires or food restrictions. Our custom clear aligners are nearly invisible, comfortable, and removable during meals.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Aligner Scan</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>3D digital optical scanning (no gagging putty impressions)</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>BPA-free crystal clear medical polyurethane material</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Simulated step-by-step 3D movement progression video</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Discreet and removable for eating, brushing, and flossing</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dental Service 5 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Gum Health</span>
+              <h3>Ultrasonic Scaling, Air Polishing & Periodontal Therapy</h3>
+              <p>
+                Healthy gums are the foundation of healthy teeth. We utilize gentle magnetostrictive ultrasonic scaling and air-flow polishing to remove calcified tartar, prevent bleeding gums, and stop bone loss without scraping or scratching natural enamel.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Cleaning & Scaling</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Ultrasonic vibration removes stubborn calculus without enamel loss</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Air-flow sodium bicarbonate polishing to remove tea/coffee stains</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Digital periodontal pocket depth charting and gum health staging</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Subgingival chlorhexidine antimicrobial irrigation</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dental Service 6 -->
+          <article class="service-detailed-card">
+            <div class="service-detailed-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="service-detailed-info">
+              <span class="service-tag">Pediatric Care</span>
+              <h3>Pediatric Dental Care, Fluoride & Sealants</h3>
+              <p>
+                Anxiety-free dental visits for toddlers, children, and young adults. Dr. Aditi Rajesh Pawar’s warm, child-centered approach turns dental anxiety into fun, applying tooth-shielding sealants and remineralizing fluoride varnish to keep children cavity-free.
+              </p>
+              <div style="margin-top: 1.25rem;">
+                <a href="contact.html#appointment-section" class="btn btn-primary btn-sm"><span>Book Child's Visit</span></a>
+              </div>
+            </div>
+            <div class="service-detailed-features">
+              <h4>Clinical Features & Technology</h4>
+              <ul>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>BPA-free resin pit and fissure sealants on vulnerable molars</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Topical fluoride varnish to strengthen developing enamel</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Gentle primary tooth restorative fillings & pulpotomy</span></li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Habit-breaking guidance (thumb-sucking and tongue thrusting)</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. 4-Step Patient Pathway (Separate Eye & Dental)
+         ======================================================================== -->
+
+    <!-- EYE CARE PATHWAY -->
+    <section class="section-wrapper dept-content-eye section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Your Ophthalmic Journey</span>
+          <h2 class="section-title">The 4-Step Eye Care Pathway</h2>
+          <p class="section-subtitle">
+            Every step is designed for accuracy, transparency, and clinical comfort under the personal care of Dr. Karansing Dhanraj Chavan.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number-bubble">01</div>
+            <h3 class="step-title">Digital Slit-Lamp Exam</h3>
+            <p class="step-desc">Autorefraction, visual acuity mapping, and digital slit-lamp biomicroscopy of cornea, anterior chamber, and lens.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">02</div>
+            <h3 class="step-title">Biometry & Tonometry</h3>
+            <p class="step-desc">Goldmann applanation pressure measurement and optical biometry to determine your precise intraocular baseline.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">03</div>
+            <h3 class="step-title">Doctor Consultation</h3>
+            <p class="step-desc">Dr. Karansing Dhanraj Chavan explains your diagnostic scans, outlines conservative or surgical options, and answers every question.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">04</div>
+            <h3 class="step-title">Procedure & Care</h3>
+            <p class="step-desc">Sutureless micro-procedure in our sterile surgical suite followed by same-day discharge and proactive 48-hour follow-up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DENTAL CARE PATHWAY -->
+    <section class="section-wrapper dept-content-dental section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Your Dental Journey</span>
+          <h2 class="section-title">The 4-Step Dental Care Pathway</h2>
+          <p class="section-subtitle">
+            Gentle, anxiety-free dentistry mapped with digital intraoral imaging under the personal care of Dr. Aditi Rajesh Pawar.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number-bubble">01</div>
+            <h3 class="step-title">Intraoral HD Scan</h3>
+            <p class="step-desc">High-definition intraoral camera and low-radiation digital radiovisiography (RVG) pinpointing cavities or micro-fractures.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">02</div>
+            <h3 class="step-title">Transparent Planning</h3>
+            <p class="step-desc">Dr. Aditi Rajesh Pawar reviews magnified digital x-rays chairside with you, explaining every step with written estimates.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">03</div>
+            <h3 class="step-title">Painless Treatment</h3>
+            <p class="step-desc">Single-sitting rotary RCT or restoration executed with computerized numbing and Class-B vacuum sterilized instruments.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-bubble">04</div>
+            <h3 class="step-title">Recall & Longevity</h3>
+            <p class="step-desc">Post-treatment bite adjustment, hygiene advice, and a scheduled 6-month checkup to protect your dental investment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Frequently Asked Questions (Separate Eye & Dental)
+         ======================================================================== -->
+
+    <!-- EYE CARE FAQS -->
+    <section class="section-wrapper dept-content-eye">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Ophthalmic Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions — Eye Care</h2>
+          <p class="section-subtitle">
+            Honest answers to the most common questions our cataract, glaucoma, and vision patients ask.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>How long does Phaco cataract surgery take, and is it painful?</span>
+            </h3>
+            <p class="faq-answer">
+              The procedure takes only 15 to 20 minutes under topical anesthetic eye drops. You remain awake and comfortable without needles, stitches, or eye patches. Most patients resume gentle daily activities within 24 to 48 hours.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>What is the difference between Monofocal, Toric, and Multifocal IOLs?</span>
+            </h3>
+            <p class="faq-answer">
+              A monofocal lens provides sharp distance vision, requiring reading glasses for near tasks. Toric lenses correct pre-existing corneal astigmatism. Premium multifocal or trifocal lenses restore vision at multiple distances (distance, intermediate screen, and reading). Dr. Karansing Dhanraj Chavan assesses your lifestyle before recommending the ideal option.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Why is early glaucoma detection called "the silent sight thief"?</span>
+            </h3>
+            <p class="faq-answer">
+              Because open-angle glaucoma causes zero pain and gradual peripheral vision loss that your brain compensates for. By the time you notice vision changes, irreversible optic nerve damage has occurred. Annual tonometry checks are crucial for adults over 40.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Do you accept cashless health insurance for cataract surgery?</span>
+            </h3>
+            <p class="faq-answer">
+              Yes. Sahastra Ocudent Healthcare assists with cashless insurance and TPA pre-authorization for all major health insurance providers. Our front desk provides itemized estimates with complete transparency and zero hidden consumable fees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DENTAL CARE FAQS -->
+    <section class="section-wrapper dept-content-dental">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Dental Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions — Dental Care</h2>
+          <p class="section-subtitle">
+            Honest answers to the most common questions our root canal, implant, and aligner patients ask.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Is single-sitting rotary root canal treatment really painless?</span>
+            </h3>
+            <p class="faq-answer">
+              Yes! With modern computerized local anesthesia and motorized nickel-titanium rotary files, the actual procedure is completely pain-free. Patients feel immediate relief from the throbbing ache caused by the underlying infected tooth pulp.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>How long do dental implants last, and what is the success rate?</span>
+            </h3>
+            <p class="faq-answer">
+              Dental implants boast a clinical success rate of over 97%. Because the biocompatible titanium post fuses directly with your jawbone (osseointegration), an implant can easily last a lifetime with routine oral hygiene and 6-month checkups.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Are clear aligners suitable for all types of crooked teeth?</span>
+            </h3>
+            <p class="faq-answer">
+              Clear aligners effectively correct mild to moderately severe crowding, gaps, rotations, and minor bite misalignments. During your 3D digital scan, Dr. Aditi Rajesh Pawar generates a complete treatment preview showing the exact movements and duration before you begin.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3 class="faq-question">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>When should my child visit the dentist for the first time?</span>
+            </h3>
+            <p class="faq-answer">
+              We recommend their first dental checkup either when their first milk tooth erupts or around their first birthday. Early visits acclimate children positively to the dental chair and allow us to apply painless fluoride varnish and fissure sealants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Department-Specific Doctor Consultation Callout Banner
+         ======================================================================== -->
+
+    <!-- EYE CARE CONSULTATION BANNER -->
+    <section class="container dept-content-eye" style="margin-top: 3.5rem; margin-bottom: 5rem;">
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.9; display: block; margin-bottom: 0.5rem;">Senior Ophthalmic Consultation</span>
+          <h2>Consult With Dr. Karansing Dhanraj Chavan Today</h2>
+          <p>
+            Experience gentle, evidence-based ophthalmic care. Schedule your sutureless Phaco cataract evaluation or vision screening with Dr. Chavan at our Wakad, Pune clinic.
+          </p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="contact.html#appointment-section" class="btn btn-primary btn-lg">
+            <span>Book Eye Consultation</span>
+          </a>
+          <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
+            <span>WhatsApp Eye Desk</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DENTAL CARE CONSULTATION BANNER -->
+    <section class="container dept-content-dental" style="margin-top: 3.5rem; margin-bottom: 5rem;">
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.9; display: block; margin-bottom: 0.5rem;">Senior Dental Consultation</span>
+          <h2>Consult With Dr. Aditi Rajesh Pawar Today</h2>
+          <p>
+            Experience anxiety-free, gentle dentistry. Schedule your clear aligner scan, modern braces consultation, or smile makeover with Dr. Pawar at our Wakad, Pune clinic.
+          </p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="contact.html#appointment-section" class="btn btn-primary btn-lg">
+            <span>Book Dental Consultation</span>
+          </a>
+          <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
+            <span>WhatsApp Dental Desk</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       7. Global Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="footer-logo-wrap">
+              <img src="assets/icons/sahastra-logo.png" alt="SAHASTRA OCUDENT HEALTHCARE" class="footer-logo-img">
+            </div>
+            <span class="footer-brand-badge">Integrated Eye & Dental Excellence</span>
+          </div>
+          <p class="footer-desc">
+            An integrated center of clinical excellence uniting modern ophthalmology and advanced dental science under one caring, state-of-the-art roof in Wakad, Pune.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Clinic Desk" class="footer-social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.776-.876-2.052-.976-.275-.101-.476-.15-.677.15-.2.301-.776.976-.952 1.177-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.502.101-.201.05-.376-.025-.526-.075-.151-.677-1.632-.928-2.235-.244-.588-.492-.508-.677-.518l-.578-.01c-.201 0-.527.076-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.08 2.912 1.23 3.113.151.201 2.126 3.246 5.15 4.553.72.311 1.282.497 1.72.637.724.23 1.382.197 1.903.12.58-.087 1.776-.726 2.026-1.428.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351zM12.04 2C6.54 2 2.08 6.46 2.08 11.96c0 1.98.58 3.82 1.58 5.37L2 22l4.82-1.61c1.48.91 3.22 1.44 5.22 1.44 5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.23c-1.75 0-3.37-.53-4.73-1.44l-.34-.23-2.86.95.96-2.78-.23-.37a8.17 8.17 0 0 1-1.25-4.4c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.27-8.2 8.27z"/></svg>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Clinic</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="why-choose-us.html">Why Choose Us</a></li>
+            <li><a href="contact.html">Contact & OPD Timings</a></li>
+            <li><a href="contact.html#appointment-section">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinical Divisions -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Clinical Divisions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Cataract Phaco Surgeries</a></li>
+            <li><a href="services.html">Glaucoma Diagnostics</a></li>
+            <li><a href="services.html">Diabetic Retinopathy Screening</a></li>
+            <li><a href="services.html">Rotary Root Canal Therapy</a></li>
+            <li><a href="services.html">Dental Implants & Crowns</a></li>
+            <li><a href="services.html">Clear Aligners & Braces</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinic Details -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919096532832">+91 90965 32832</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contact@sahastraocudent.org">contact@sahastraocudent.org</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Wakad, Pune, Maharashtra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAHASTRA OCUDENT HEALTHCARE. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#privacy" class="open-privacy-policy">Privacy Policy</a>
+          <a href="#terms" class="open-terms-modal">Terms of Use</a>
+          <a href="contact.html#appointment-section">Appointment Request</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/dotGrid.js"></script>
+  <script src="js/app.js?v=4.3"></script>
+</body>
+</html>

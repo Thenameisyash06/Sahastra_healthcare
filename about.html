@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" data-department="eye-care">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Clinic | SAHASTRA OCUDENT HEALTHCARE</title>
+  <meta name="description" content="Learn about Sahastra Ocudent Healthcare - dedicated ophthalmology and dental care led by senior specialists Dr. Karansing Dhanraj Chavan and Dr. Aditi Rajesh Pawar with advanced hospital-grade technology.">
+  <link rel="canonical" href="https://sahastraocudent.org/about">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4.3">
+</head>
+<body class="page-about">
+
+  <!-- ========================================================================
+       1. Global Header with Department Switcher & Navigation
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Clinic Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Sahastra Ocudent Healthcare - Home">
+        <img src="assets/icons/sahastra-logo.png" alt="SAHASTRA OCUDENT HEALTHCARE Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Department Switcher -->
+      <nav class="dept-switcher-wrapper" aria-label="Department Switcher">
+        <div class="dept-pill-indicator" id="dept-pill-indicator" aria-hidden="true"></div>
+        <button type="button" class="dept-btn active" data-dept="eye-care" id="dept-btn-eye" aria-pressed="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>Eye Care</span>
+        </button>
+        <button type="button" class="dept-btn" data-dept="dental-care" id="dept-btn-dental" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/>
+            <path d="M9 7c1 1 5 1 6 0"/>
+          </svg>
+          <span>Dental Care</span>
+        </button>
+      </nav>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="why-choose-us.html" class="nav-link">Why Choose Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="contact.html#appointment-section" class="btn btn-primary btn-sm header-cta-desktop">
+          <span>Book Appointment</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <img src="assets/icons/sahastra-logo.png" alt="SAHASTRA OCUDENT HEALTHCARE" style="height: 38px; width: auto; object-fit: contain;">
+      <button type="button" class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About Clinic</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Clinical Services</a></li>
+      <li><a href="why-choose-us.html" class="mobile-nav-link">Why Choose Us</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact & Location</a></li>
+    </ul>
+
+    <div class="mobile-drawer-cta">
+      <a href="contact.html#appointment-section" class="btn btn-primary btn-block">Book Appointment</a>
+      <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.776-.876-2.052-.976-.275-.101-.476-.15-.677.15-.2.301-.776.976-.952 1.177-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.502.101-.201.05-.376-.025-.526-.075-.151-.677-1.632-.928-2.235-.244-.588-.492-.508-.677-.518l-.578-.01c-.201 0-.527.076-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.08 2.912 1.23 3.113.151.201 2.126 3.246 5.15 4.553.72.311 1.282.497 1.72.637.724.23 1.382.197 1.903.12.58-.087 1.776-.726 2.026-1.428.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351zM12.04 2C6.54 2 2.08 6.46 2.08 11.96c0 1.98.58 3.82 1.58 5.37L2 22l4.82-1.61c1.48.91 3.22 1.44 5.22 1.44 5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.23c-1.75 0-3.37-.53-4.73-1.44l-.34-.23-2.86.95.96-2.78-.23-.37a8.17 8.17 0 0 1-1.25-4.4c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.27-8.2 8.27z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ========================================================================
+         2. Page Hero / Header Banner (Switches dynamically with Department Toggle)
+         ======================================================================== -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About Our Clinic</span>
+        </nav>
+
+        <!-- Eye Care Hero View -->
+        <div class="dept-content-eye">
+          <span class="page-badge">About Sahastra Eye Care</span>
+          <h1 class="page-hero-title">Excellence in Micro-Surgical Ophthalmology</h1>
+          <p class="page-hero-subtitle">
+            Dedicated to preserving and restoring visual clarity through high-precision diagnostics, sutureless micro-incision cataract surgery, and compassionate, evidence-based ophthalmic care in Wakad, Pune.
+          </p>
+        </div>
+
+        <!-- Dental Care Hero View -->
+        <div class="dept-content-dental">
+          <span class="page-badge">About Sahastra Dental Care</span>
+          <h1 class="page-hero-title">Excellence in Modern & Painless Dentistry</h1>
+          <p class="page-hero-subtitle">
+            Dedicated to providing gentle, anxiety-free oral healthcare, conservative restorative dentistry, and beautiful, confident smiles through state-of-the-art dental technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. Foundation & Clinical Philosophy
+         ======================================================================== -->
+    
+    <!-- Eye Care Foundation -->
+    <section class="section-wrapper dept-content-eye" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Ophthalmic Foundation</span>
+          <h2 class="section-title">Clinical Rigor & Evidence-Based Eye Care</h2>
+          <p class="section-subtitle">
+            Sight is our most cherished sensory connection to the world. At Sahastra Eye Care, our practice is founded on absolute diagnostic integrity, conservative therapy, and microsurgical precision.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 14.83 4.24 4.24"/></svg>
+            </div>
+            <h4 class="why-title">Diagnostic Accuracy</h4>
+            <p class="why-desc">High-resolution digital slit-lamp biomicroscopy and applanation tonometry ensure exact ocular pressure and anterior segment mapping.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4 class="why-title">Micro-Incision Phaco</h4>
+            <p class="why-desc">Sutureless 2.2mm cataract procedures with ultrasonic precision and customized intraocular lens (IOL) selection for rapid healing.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4 class="why-title">Conservative Ethics</h4>
+            <p class="why-desc">We never push unwarranted surgeries or procedures. Every finding is photographed and transparently explained to you.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            </div>
+            <h4 class="why-title">Frictionless OPD Scheduling</h4>
+            <p class="why-desc">Schedule comprehensive vision screenings online or via WhatsApp with minimal waiting room delays and dedicated follow-up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Care Foundation -->
+    <section class="section-wrapper dept-content-dental" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Dental Foundation</span>
+          <h2 class="section-title">Painless Dental Science & Patient Comfort</h2>
+          <p class="section-subtitle">
+            We are dedicated to shattering the myth that dental care has to be painful or intimidating. Our operatory combines gentle chairside touch with computerized micro-endodontics.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+            </div>
+            <h4 class="why-title">Pain-Free Techniques</h4>
+            <p class="why-desc">Single-sitting rotary endodontics with precision apex locators and gentle topical anesthesia ensure complete patient comfort.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/><path d="M9 7c1 1 5 1 6 0"/></svg>
+            </div>
+            <h4 class="why-title">Conservative Tooth Preservation</h4>
+            <p class="why-desc">We prioritize saving your natural tooth structure with biomimetic ceramic restorations rather than rushing into extractions.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4 class="why-title">Hospital-Grade Sterility</h4>
+            <p class="why-desc">Class-B vacuum autoclaving, individual sealed pouches, and anti-retraction handpieces guarantee zero cross-contamination.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h4 class="why-title">Transparent Itemized Estimates</h4>
+            <p class="why-desc">Detailed treatment plans with transparent pricing, zero unexpected post-treatment charges, and honest material specifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Medical Specialists Spotlight
+         (Exactly 1 Male Doctor for Eye Care, 1 Female Doctor for Dental Care)
+         ======================================================================== -->
+    
+    <!-- Eye Care Doctor Spotlight: Dr. Karansing Dhanraj Chavan (Male) -->
+    <section class="section-wrapper dept-content-eye" style="background-color: var(--color-bg-base); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Clinical Leadership</span>
+          <h2 class="section-title">Head of Ophthalmology & Cataract Surgery</h2>
+          <p class="section-subtitle">
+            Our Eye Care department is led exclusively by Dr. Karansing Dhanraj Chavan, an accomplished consultant ophthalmologist and cataract surgeon with extensive microsurgical experience.
+          </p>
+        </div>
+
+        <div class="doctor-spotlight-wrapper">
+          <article class="doctor-spotlight-card">
+            
+            <!-- Doctor Left Column (Portrait & Badges) -->
+            <div class="doctor-spotlight-aside">
+              <div class="doctor-avatar-portrait">
+                <img src="assets/images/dr-karansing-chavan.jpg" alt="Dr. Karansing Dhanraj Chavan" class="doctor-avatar-img">
+              </div>
+              <div class="doctor-exp-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>12+ Years Experience</span>
+              </div>
+              <div class="doctor-aside-rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span>4.9 (12,000+ Surgeries)</span>
+              </div>
+              <a href="contact.html#appointment-section" class="btn btn-primary btn-sm btn-block">
+                <span>Book with Dr. Chavan</span>
+              </a>
+            </div>
+
+            <!-- Doctor Right Column (Credentials, Bio & Focus) -->
+            <div class="doctor-spotlight-content">
+              <div class="doctor-header-row">
+                <h3 class="doctor-name-title">Dr. Karansing Dhanraj Chavan</h3>
+                <span class="doctor-role-tag">MS Ophthalmologist | Cataract Surgeon</span>
+              </div>
+              <div class="doctor-degrees">MBBS, MS (Ophthalmology), Fellowship in Cataract & Phacoemulsification</div>
+
+              <p class="doctor-narrative">
+                Dr. Karansing Dhanraj Chavan is an accomplished ophthalmologist and cataract surgeon with over 12,000+ successful microsurgical procedures, including 7,500+ Phacoemulsification and 4,500+ SICS surgeries. An alumnus of B. J. Government Medical College, Pune (MBBS) and Dr. Vasantrao Pawar Medical College, Nashik (MS Ophthalmology), he completed specialized fellowship training in Cataract and Phacoemulsification at JSF Anandrishiji Netralaya. He is known for exceptional diagnostic skills, modern surgical techniques, and clear patient communication.
+              </p>
+
+              <h4 class="doctor-specialties-heading">Clinical Specializations & Focus:</h4>
+              <div class="doctor-specialties-grid">
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Phacoemulsification Cataract Surgery (7,500+ Surgeries)</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Small Incision Cataract Surgery (SICS - 4,500+ Surgeries)</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Comprehensive Ophthalmic Diagnostics & Clinical Evaluations</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Advanced Surgical Techniques & Vision Restoration</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8125rem; color: var(--color-text-muted); display: flex; align-items: center; gap: 0.5rem; margin-top: auto;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Clinic Timings: Monday – Sunday (9:00 AM – 8:00 PM)</span>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Care Doctor Spotlight: Dr. Aditi Rajesh Pawar (Female) -->
+    <section class="section-wrapper dept-content-dental" style="background-color: var(--color-bg-base); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Clinical Leadership</span>
+          <h2 class="section-title">Head of Orthodontics & Dental Care</h2>
+          <p class="section-subtitle">
+            Our Dental Care department is led exclusively by Dr. Aditi Rajesh Pawar, an MDS Orthodontist and MUHS Gold Medalist specializing in orthodontic alignment, dentofacial orthopaedics, and modern smile transformations.
+          </p>
+        </div>
+
+        <div class="doctor-spotlight-wrapper">
+          <article class="doctor-spotlight-card">
+            
+            <!-- Doctor Left Column (Portrait & Badges) -->
+            <div class="doctor-spotlight-aside">
+              <div class="doctor-avatar-portrait" style="background: linear-gradient(135deg, #0d9488 0%, #042f2e 100%);">
+                <img src="assets/images/dr-aditi-pawar.jpg" alt="Dr. Aditi Rajesh Pawar" class="doctor-avatar-img">
+              </div>
+              <div class="doctor-exp-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>MDS Orthodontist</span>
+              </div>
+              <div class="doctor-aside-rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span>Gold Medalist (MUHS 2024)</span>
+              </div>
+              <a href="contact.html#appointment-section" class="btn btn-primary btn-sm btn-block">
+                <span>Book with Dr. Pawar</span>
+              </a>
+            </div>
+
+            <!-- Doctor Right Column (Credentials, Bio & Focus) -->
+            <div class="doctor-spotlight-content">
+              <div class="doctor-header-row">
+                <h3 class="doctor-name-title">Dr. Aditi Rajesh Pawar</h3>
+                <span class="doctor-role-tag">MDS Orthodontist | Gold Medalist (MUHS 2024)</span>
+              </div>
+              <div class="doctor-degrees">BDS, MDS (Orthodontics &amp; Dentofacial Orthopaedics) — Gold Medalist (MUHS)</div>
+
+              <p class="doctor-narrative">
+                Dr. Aditi Rajesh Pawar is a gold medalist orthodontist and dentofacial orthopaedics specialist dedicated to patient-centered care and modern smile transformations. An alumna of Sinhagad Dental College &amp; Hospital, Pune (BDS) and JMF's A.C.P.M Dental College, Dhule (MDS), she was awarded the university gold medal by Maharashtra University of Health Sciences (MUHS Nashik). She brings hands-on clinical expertise in clear aligner therapy, modern braces placement, dentofacial growth modification, and space maintainers.
+              </p>
+
+              <h4 class="doctor-specialties-heading">Clinical Specializations & Focus:</h4>
+              <div class="doctor-specialties-grid">
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Clear Aligner Therapy &amp; Digital Treatment Planning</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Orthodontic Braces Placement &amp; Malocclusion Treatment</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dentofacial Orthopaedics &amp; Pediatric Growth Modification</span>
+                </div>
+                <div class="doctor-specialty-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Space Maintainers &amp; Interceptive Orthodontics</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8125rem; color: var(--color-text-muted); display: flex; align-items: center; gap: 0.5rem; margin-top: auto;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Clinic Timings: Monday – Sunday (9:00 AM – 8:00 PM)</span>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Clinical Equipment & Technology
+         ======================================================================== -->
+    
+    <!-- Eye Care Technology -->
+    <section class="section-wrapper dept-content-eye" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Precision Infrastructure</span>
+          <h2 class="section-title">Ophthalmic Diagnostic & Surgical Equipment</h2>
+          <p class="section-subtitle">
+            Micro-surgical ophthalmology demands uncompromising optical clarity. Our facility is equipped with global gold-standard instrumentation.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h4 class="why-title">Carl Zeiss Lumera Microscope</h4>
+            <p class="why-desc">Red-reflex surgical illumination providing brilliant stereoscopic depth during delicate capsulorhexis and lens alignment.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h4 class="why-title">Alcon Infiniti Phaco System</h4>
+            <p class="why-desc">Advanced fluidics and torsional ultrasound handpiece ensuring minimal thermal impact and crystal-clear post-operative corneas.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4 class="why-title">Nidek Digital Slit-Lamp</h4>
+            <p class="why-desc">High-definition digital camera attachment capturing anterior chamber cross-sections for immediate patient visualization.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4 class="why-title">Goldmann Applanation Tonometry</h4>
+            <p class="why-desc">Internationally recognized gold standard for precise intraocular pressure measurement and early glaucoma detection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Care Technology -->
+    <section class="section-wrapper dept-content-dental" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Operatory Infrastructure</span>
+          <h2 class="section-title">Advanced Dental Operatory Equipment</h2>
+          <p class="section-subtitle">
+            Modern conservative dentistry relies on digital imaging and precision rotary endodontics. Explore our clinical technology suite.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 6 5 6 9c0 3 1 7 2 11 0 1.5 1 2 2 2s2-1 2-3c0-2 .5-3 1-3s1 1 1 3c0 2 1 3 2 3s2-.5 2-2c1-4 2-8 2-11 0-4-2-7-7-7z"/></svg>
+            </div>
+            <h4 class="why-title">Dentsply Sirona Rotary Motor</h4>
+            <p class="why-desc">Computer-controlled torque and reciprocating motion preventing file separation and achieving painless root canal sanitization.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/></svg>
+            </div>
+            <h4 class="why-title">Vatech Digital RVG Sensor</h4>
+            <p class="why-desc">Ultra-low radiation digital radiovisiography delivering instantaneous chairside X-ray imaging with microscopic bone definition.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4 class="why-title">Euronda Class-B Vacuum Autoclave</h4>
+            <p class="why-desc">Fractionated pre-vacuum thermal steam sterilization meeting European EN 13060 standards for 100% spore destruction.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+            </div>
+            <h4 class="why-title">Woodpecker Piezo Scaler</h4>
+            <p class="why-desc">Gentle ultrasonic periodontal scaling technology that removes subgingival calculus without scratching natural dental enamel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Call-to-Action Banner
+         ======================================================================== -->
+    <section class="container" style="margin-bottom: 5rem;">
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <div class="dept-content-eye">
+            <h2>Consult With Dr. Karansing Chavan Today</h2>
+            <p>Schedule a detailed ophthalmic evaluation for cataract assessment, glaucoma screening, or personalized vision correction.</p>
+          </div>
+          <div class="dept-content-dental">
+            <h2>Consult With Dr. Aditi Pawar Today</h2>
+            <p>Schedule a comfortable dental checkup for clear aligners, modern braces, dentofacial assessment, or preventive dental care.</p>
+          </div>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="contact.html#appointment-section" class="btn btn-primary" style="background: var(--color-white); color: var(--color-navy-950);">Book Consultation</a>
+          <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: var(--color-white);">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       7. Global Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="footer-logo-wrap">
+              <img src="assets/icons/sahastra-logo.png" alt="SAHASTRA OCUDENT HEALTHCARE" class="footer-logo-img">
+            </div>
+            <span class="footer-brand-badge">Integrated Eye & Dental Excellence</span>
+          </div>
+          <p class="footer-desc">
+            An integrated center of clinical excellence uniting modern ophthalmology and advanced dental science under one caring, state-of-the-art roof in Wakad, Pune.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Clinic Desk" class="footer-social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.776-.876-2.052-.976-.275-.101-.476-.15-.677.15-.2.301-.776.976-.952 1.177-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.502.101-.201.05-.376-.025-.526-.075-.151-.677-1.632-.928-2.235-.244-.588-.492-.508-.677-.518l-.578-.01c-.201 0-.527.076-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.08 2.912 1.23 3.113.151.201 2.126 3.246 5.15 4.553.72.311 1.282.497 1.72.637.724.23 1.382.197 1.903.12.58-.087 1.776-.726 2.026-1.428.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351zM12.04 2C6.54 2 2.08 6.46 2.08 11.96c0 1.98.58 3.82 1.58 5.37L2 22l4.82-1.61c1.48.91 3.22 1.44 5.22 1.44 5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.23c-1.75 0-3.37-.53-4.73-1.44l-.34-.23-2.86.95.96-2.78-.23-.37a8.17 8.17 0 0 1-1.25-4.4c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.27-8.2 8.27z"/></svg>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Clinic</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="why-choose-us.html">Why Choose Us</a></li>
+            <li><a href="contact.html">Contact & OPD Timings</a></li>
+            <li><a href="contact.html#appointment-section">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinical Divisions -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Clinical Divisions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Cataract Phaco Surgeries</a></li>
+            <li><a href="services.html">Glaucoma Diagnostics</a></li>
+            <li><a href="services.html">Diabetic Retinopathy Screening</a></li>
+            <li><a href="services.html">Rotary Root Canal Therapy</a></li>
+            <li><a href="services.html">Dental Implants & Crowns</a></li>
+            <li><a href="services.html">Clear Aligners & Braces</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinic Details -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919096532832">+91 90965 32832</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contact@sahastraocudent.org">contact@sahastraocudent.org</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Wakad, Pune, Maharashtra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAHASTRA OCUDENT HEALTHCARE. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#privacy" class="open-privacy-policy">Privacy Policy</a>
+          <a href="#terms" class="open-terms-modal">Terms of Use</a>
+          <a href="contact.html#appointment-section">Appointment Request</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Connect -->
+  <div class="floating-whatsapp">
+    <span class="floating-whatsapp-tooltip">Chat with Clinic on WhatsApp</span>
+    <a href="https://wa.me/919096532832" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floating-whatsapp-link" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+        <path d="M17.472 14.382c-.301-.15-1.776-.876-2.052-.976-.275-.101-.476-.15-.677.15-.2.301-.776.976-.952 1.177-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.502.101-.201.05-.376-.025-.526-.075-.151-.677-1.632-.928-2.235-.244-.588-.492-.508-.677-.518l-.578-.01c-.201 0-.527.076-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.08 2.912 1.23 3.113.151.201 2.126 3.246 5.15 4.553.72.311 1.282.497 1.72.637.724.23 1.382.197 1.903.12.58-.087 1.776-.726 2.026-1.428.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351zM12.04 2C6.54 2 2.08 6.46 2.08 11.96c0 1.98.58 3.82 1.58 5.37L2 22l4.82-1.61c1.48.91 3.22 1.44 5.22 1.44 5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.23c-1.75 0-3.37-.53-4.73-1.44l-.34-.23-2.86.95.96-2.78-.23-.37a8.17 8.17 0 0 1-1.25-4.4c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.27-8.2 8.27z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Privacy Policy / Terms Modal -->
+  <div class="modal-backdrop" id="policy-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="policy-modal-title">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="policy-modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="modal-title" id="policy-modal-title">Policy Information</h3>
+      <div class="modal-body" id="policy-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/dotGrid.js"></script>
+  <script src="js/app.js?v=4.3"></script>
+</body>
+</html>
